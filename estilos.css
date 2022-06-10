@@ -146,19 +146,12 @@
 .noticias div img {
     margin: 30px;
 }
+
 .transition {
     transition: 1s;
 }
 
 .transition:hover { 
-    transform: scale(1.1);
-} 
-
-.prueba {
-    transition: 1s;
-}
-
-.prueba:hover { 
     transform: scale(1.1);
 } 
 
