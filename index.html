@@ -5,22 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Radio Canelones</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+
     <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body>
     <div class="grid-conteiner">
         <header class="header">
-            <img src="./imagenes/Logo.png" alt="logo institución de la radio">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="Paginas/programacion.html">Programación</a></li>
-                    <li><a href="Paginas/punto_de_vista.html">Punto de Vista</a></li>
-                    <li><a href="Paginas/4pm.html">4 PM</a></li>
-                    <li><a href="Paginas/contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
+            <img src="./imagenes/logo.png" alt="logo institución de la radio">
+            <!--menu-->
+
+            <nav class="navbar navbar-expand-lg navbar-dark bg-naranja">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="index.html">Inicio</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="Paginas/programacion.html">Programación</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="Paginas/punto_de_vista.html">Punto de Vista</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="Paginas/4pm.html">4 PM</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="Paginas/contacto.html">Contacto</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
         </header>
 
         <main class="main">
@@ -101,6 +120,7 @@
             </div>
         </footer>
     </div>
+    <script src="js/bootstrap.js"></script>
 </body>
 
 </html>
