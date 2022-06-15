@@ -82,23 +82,24 @@
     font-size: 45px;
 }
 
-.destacada {
-    background-color: rgb(196, 19, 19);
-    text-align: center;
-}
-
 .destacada div {
     display: flex;
     background-color: white;
+    margin: 0px;
 }
 
-.destacada h2 {
+.destacada div h2 {
     color: rgb(255, 255, 255);
     text-align: center;
     font-size: 30px;
     background-color: rgb(196, 19, 19);
     padding: 25px;
-    border-radius: 15px;
+    padding-left: 100px;
+    padding-right: 100px;
+    text-align: center;
+    border-radius: 30px;
+    margin-top: 10px;
+    margin-left: 500px;
 }
 
 .destacada div p {
@@ -116,12 +117,18 @@
     text-align: center;
 }
 
-.noticias h2 {
+.noticias div h2 {
     color: rgb(255, 255, 255);
     text-align: center;
     font-size: 30px;
     background-color: rgb(196, 19, 19);
     padding: 25px;
+    padding-left: 100px;
+    padding-right: 100px;
+    text-align: center;
+    border-radius: 30px;
+    margin-top: 10px;
+    margin-left: 100px;
 }
 
 .noticias>div {
@@ -165,7 +172,7 @@
     display: flex;
     justify-content: space-around;
     align-content: center;
-    
+
     grid-area: footer;
 }
 
@@ -189,7 +196,7 @@
     height: 35px;
     margin-left: 40px;
     margin-bottom: 20px;
-    
+
 }
 
 .footer div h4 {
@@ -225,6 +232,7 @@
         flex-direction: column;
         justify-content: center;
     }
+
     .hero div img {
         width: 100%;
     }
@@ -244,12 +252,34 @@
     }
 }
 
+@media screen and (max-width: 1005px) {
+    .destacada div h2 {
+        padding: 50px;
+        margin: 50px;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+}
+
 @media screen and (max-width: 1150px) {
     .noticias div {
         width: 100%;
         justify-content: center;
         text-align: center;
     }
+}
+
+@media screen and (max-width: 1005px) {
+    .noticias div h2 {
+        padding: 50px;
+        margin: 50px;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
 }
 
 @media screen and (max-width: 705px) {
