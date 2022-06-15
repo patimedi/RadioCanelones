@@ -142,6 +142,10 @@
     margin: 30px;
 }
 
+.noticias>div>section {
+    margin: 45px;
+}
+
 .transition {
     transition: 1s;
 }
@@ -153,6 +157,7 @@
 .btn-naranja {
     background-color: rgb(196, 19, 19);
 }
+
 
 
 /*----FOOTER----*/
