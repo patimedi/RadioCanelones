@@ -150,6 +150,11 @@
     transform: scale(1.1);
 }
 
+.btn-naranja {
+    background-color: rgb(196, 19, 19);
+}
+
+
 /*----FOOTER----*/
 
 .footer {
