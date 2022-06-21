@@ -1,0 +1,35 @@
+@import "../Base/variables";
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: header;
+    background-image: linear-gradient(rgba(26, 25, 25, 0.178), rgba(177, 177, 177, 0.103), grey);
+    img{
+        width: 180px;
+        height: 180px;
+        box-sizing: border-box;
+        align-content: center;
+        margin-left: 100px;
+    }
+    nav{
+        ul{
+            li{
+                margin: 15px;
+                align-content: center;
+                a{
+                    text-decoration: none;
+                    color: rgb(255, 255, 255);
+                    text-transform: uppercase; 
+                }
+            }
+        }
+    }
+}
+
+.bg-naranja {
+    background-color: $color-principal;
+    border-radius: 15px;
+    margin-top: 10px;
+}
