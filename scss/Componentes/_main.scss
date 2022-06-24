@@ -27,38 +27,33 @@
     }
 }
 .destacada{ 
-    div{
+    text-align: center; 
+}
+.titulo-destacada{
         display: flex; 
-         h2 {
+        h2 {
+            display: flex;
+            justify-content: center;
             color: rgb(255, 255, 255);
-            text-align: center;
             font-size: 30px;
             background-color: $color-principal;
-            padding: 25px;
-            padding-left: 100px;
-            padding-right: 100px;
-            text-align: center;
             border-radius: 30px;
-            margin-top: 10px;
-            margin-left: 500px;
+            padding: 30px;
         }
     }
-}
+
 .noticias{
     text-align: center; 
     div{ 
+        display: flex; 
         h2 {
+            display: flex;
+            justify-content: center;
             color: rgb(255, 255, 255);
-            text-align: center;
             font-size: 30px;
             background-color: $color-principal;
-            padding: 25px;
-            padding-left: 100px;
-            padding-right: 100px;
-            text-align: center;
             border-radius: 30px;
-            margin-top: 10px;
-            margin-left: 100px;
+            padding: 30px;
         }
     }
     div{
@@ -67,17 +62,30 @@
     align-items: center;
     flex-wrap: wrap;
     background-color: rgb(255, 255, 255);
-        div {
+        div {  
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 400px;
-            }   
-            img {
-                margin: 30px;
+        justify-content: center;
+        align-items: center;
+        width: 400px;            
+                div {
+                    display: flex;
+                    justify-content: row;
+                    align-items: center;
+                    padding: 40px;
+                        img {
+                            margin-left: 10px;
+                            width: 20px;
+                        }
+                    }
+                }
             }
-    }
-}
+        }
+    
+
+
+
+
+
 .transition {
     transition: 1s;
     &:hover {

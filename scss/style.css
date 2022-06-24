@@ -70,28 +70,20 @@
   font-size: 45px;
 }
 
-.destacada {
-  text-align: center;
-}
-
-.titulo-destacada {
+.destacada div {
   display: flex;
 }
-.titulo-destacada h2 {
+.destacada div h2 {
   display: flex;
   justify-content: center;
   color: rgb(255, 255, 255);
   font-size: 30px;
   background-color: rgb(196, 19, 19);
   border-radius: 30px;
-  padding: 30px;
 }
 
 .noticias {
   text-align: center;
-}
-.noticias div {
-  display: flex;
 }
 .noticias div h2 {
   display: flex;
@@ -100,7 +92,6 @@
   font-size: 30px;
   background-color: rgb(196, 19, 19);
   border-radius: 30px;
-  padding: 30px;
 }
 .noticias div {
   display: flex;
@@ -193,6 +184,22 @@ div h4 {
   }
   .hero div img {
     width: 100%;
+  }
+}
+@media screen and (max-width: 914px) {
+  .destacada div {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+  }
+  .destacada div img {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
   }
 }
 @media screen and (max-width: 1150px) {
