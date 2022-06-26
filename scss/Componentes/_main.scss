@@ -26,6 +26,14 @@
         }
     }
 }
+
+/* Mixins */
+@mixin titulos($tamano, $borde, $padding) {
+    font-size: $tamano;
+    padding: $padding;
+    border-radius: $borde;
+}
+
 .destacada{ 
     text-align: center; 
 }
@@ -35,10 +43,10 @@
             display: flex;
             justify-content: center;
             color: rgb(255, 255, 255);
-            font-size: 30px;
             background-color: $color-principal;
             border-radius: 30px;
             padding: 30px;
+            font-size: 30px;
         }
     }
 
@@ -50,10 +58,10 @@
             display: flex;
             justify-content: center;
             color: rgb(255, 255, 255);
-            font-size: 30px;
             background-color: $color-principal;
             border-radius: 30px;
             padding: 30px;
+            font-size: 30px;
         }
     }
     div{
@@ -81,10 +89,6 @@
             }
         }
     
-
-
-
-
 
 .transition {
     transition: 1s;

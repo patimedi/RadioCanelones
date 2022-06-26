@@ -138,13 +138,7 @@
     width: 20px;
 }
 
-.noticias>div>section {
-    margin: 45px;
-}
-
-.noticias>h5 {
-    margin-top: 25px;
-    margin-bottom: 25px;
+.noticias>h3 {
     color: rgb(196, 19, 19);
     font-size: 25px;
     text-align: center;
@@ -195,7 +189,7 @@
 
 }
 
-.footer div h4 {
+.footer div h3 {
     margin-top: 30px;
 }
 

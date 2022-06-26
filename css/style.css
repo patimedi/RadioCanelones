@@ -70,6 +70,7 @@
   font-size: 45px;
 }
 
+/* Mixins */
 .destacada {
   text-align: center;
 }
@@ -81,10 +82,10 @@
   display: flex;
   justify-content: center;
   color: rgb(255, 255, 255);
-  font-size: 30px;
   background-color: rgb(196, 19, 19);
   border-radius: 30px;
   padding: 30px;
+  font-size: 30px;
 }
 
 .noticias {
@@ -97,10 +98,10 @@
   display: flex;
   justify-content: center;
   color: rgb(255, 255, 255);
-  font-size: 30px;
   background-color: rgb(196, 19, 19);
   border-radius: 30px;
   padding: 30px;
+  font-size: 30px;
 }
 .noticias div {
   display: flex;
@@ -142,28 +143,28 @@
   justify-content: space-around;
   align-content: center;
   grid-area: footer;
+  background-color: rgba(119, 119, 119, 0.562);
 }
 .footer img {
-  width: 350px;
-  height: 80px;
+  width: 200px;
+  height: 200px;
   margin-right: 25px;
   margin-top: 30px;
 }
+.footer div h3 {
+  font-size: 18px;
+}
 .footer div ul {
-  margin-top: 5px;
-  margin-left: 10px;
   padding: 15px;
   list-style: none;
   display: flex;
 }
 .footer div ul img {
-  width: 35px;
-  height: 35px;
-  margin-left: 40px;
-  margin-bottom: 20px;
+  width: 50px;
+  height: 50px;
 }
 
-div h4 {
+div h3 {
   margin-top: 30px;
 }
 
@@ -178,11 +179,12 @@ div h4 {
     justify-content: center;
   }
 }
+/* mixin*/
 @media screen and (max-width: 1180px) {
   .header img {
     width: 200px;
     height: 200px;
-    margin: 0;
+    margin: 0px;
   }
 }
 @media screen and (max-width: 896px) {
@@ -207,19 +209,17 @@ div h4 {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    height: auto;
     align-content: center;
   }
   .footer div ul {
     justify-content: center;
     text-align: center;
     align-content: center;
-    margin-right: 45px;
   }
   .footer img {
-    align-content: center;
-    justify-content: center;
-    margin-left: 75px;
+    width: 100px;
+    height: 100px;
+    margin: 0px;
   }
 }
 

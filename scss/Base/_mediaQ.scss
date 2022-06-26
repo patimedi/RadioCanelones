@@ -15,12 +15,18 @@
         }
     }
 }
+/* mixin*/
+
+@mixin tamanos ($ancho, $alto, $margin){
+    width: $ancho;
+    height: $alto;
+    margin: $margin;
+}
+
 @media screen and (max-width: 1180px) {
     .header{ 
         img {
-            width: 200px;
-            height: 200px;
-            margin: 0;
+            @include tamanos(200px,200px,0px)
         }
     }
 }
@@ -52,20 +58,16 @@
         flex-direction: column;
         justify-content: center;
         text-align: center;
-        height: auto;
         align-content: center;
         div{ 
             ul{
                 justify-content: center;
                 text-align: center;
                 align-content: center;
-                margin-right: 45px;
                 }
             }
         img {
-        align-content: center;
-        justify-content: center;
-        margin-left: 75px;
+        @include tamanos(100px,100px,0px)
     }
 }
 }
