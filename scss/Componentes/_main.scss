@@ -49,6 +49,7 @@
             font-size: 30px;
         }
     }
+/*extend*/
 
 .noticias{
     text-align: center; 
@@ -65,18 +66,18 @@
         }
     }
     div{
-    display: flex;
+    @extend .noticias;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     background-color: rgb(255, 255, 255);
         div {  
-            display: flex;
+        @extend .noticias;
         justify-content: center;
         align-items: center;
         width: 400px;            
                 div {
-                    display: flex;
+                    @extend .noticias;
                     justify-content: row;
                     align-items: center;
                     padding: 40px;

@@ -88,10 +88,11 @@
   font-size: 30px;
 }
 
-.noticias {
+/*extend*/
+.noticias, .noticias div div, .noticias div {
   text-align: center;
 }
-.noticias div {
+.noticias div, .noticias div div div {
   display: flex;
 }
 .noticias div h2 {
@@ -103,21 +104,18 @@
   padding: 30px;
   font-size: 30px;
 }
-.noticias div {
-  display: flex;
+.noticias div, .noticias div div div {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   background-color: rgb(255, 255, 255);
 }
 .noticias div div {
-  display: flex;
   justify-content: center;
   align-items: center;
   width: 400px;
 }
 .noticias div div div {
-  display: flex;
   justify-content: row;
   align-items: center;
   padding: 40px;
