@@ -38,10 +38,9 @@
     text-align: center; 
 }
 .titulo-destacada{
-        display: flex; 
+        display: flex;
+        justify-content: center; 
         h2 {
-            display: flex;
-            justify-content: center;
             color: rgb(255, 255, 255);
             background-color: $color-principal;
             border-radius: 30px;

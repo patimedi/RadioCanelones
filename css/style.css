@@ -77,10 +77,9 @@
 
 .titulo-destacada {
   display: flex;
+  justify-content: center;
 }
 .titulo-destacada h2 {
-  display: flex;
-  justify-content: center;
   color: rgb(255, 255, 255);
   background-color: rgb(196, 19, 19);
   border-radius: 30px;
