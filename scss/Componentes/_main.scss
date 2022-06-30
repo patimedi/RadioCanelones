@@ -13,9 +13,11 @@
     background-image: linear-gradient(rgba(179, 38, 38, 0.267), rgba(121, 80, 80, 0.603)), url(../imagenes/Consola.jpg);
     background-position: center;
     background-size: cover;
+
     div {
         text-align: center;
         margin-bottom: 10px;
+
         h1 {
             color: rgb(255, 255, 255);
             text-align: center;
@@ -23,10 +25,61 @@
             padding: 15px;
             text-transform: uppercase;
             font-size: 45px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
     }
 }
 
+.hero-dos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+    background-image: linear-gradient(grey, rgba(128, 128, 128, 0.267));
+    div {
+        text-align: center;
+        margin-bottom: 10px;
+
+        h1 {
+            text-transform: uppercase;
+            font-size: 50px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background: linear-gradient(rgb(197, 43, 16),rgba(255, 60, 0, 0.589));
+            text-align: center;
+            margin-bottom: 5px;
+            padding: 15px;
+            color: transparent;
+            -webkit-background-clip: text;
+        }
+    }
+}
+
+.hero-tres{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+    font-style: oblique;
+    text-shadow: 50px;
+    div {
+        text-align: center;
+        margin-bottom: 10px;
+
+        h1 {
+            text-transform: uppercase;
+            font-size: 50px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background: linear-gradient(rgb(197, 43, 16),rgba(255, 60, 0, 0.589));
+            text-align: center;
+            margin-bottom: 5px;
+            padding: 15px;
+            color: transparent;
+            -webkit-background-clip: text;
+        }
+    }
+}
 /* Mixins */
 @mixin titulos($tamano, $borde, $padding) {
     font-size: $tamano;
@@ -34,26 +87,33 @@
     border-radius: $borde;
 }
 
-.destacada{ 
-    text-align: center; 
+.destacada {
+    text-align: center;
+    margin-top: 10px;
 }
-.titulo-destacada{
-        display: flex;
-        justify-content: center; 
-        h2 {
-            color: rgb(255, 255, 255);
-            background-color: $color-principal;
-            border-radius: 30px;
-            padding: 30px;
-            font-size: 30px;
-        }
+
+.titulo-destacada {
+    display: flex;
+    justify-content: center;
+
+    h2 {
+        color: rgb(255, 255, 255);
+        background-color: $color-principal;
+        border-radius: 30px;
+        padding: 30px;
+        font-size: 30px;
     }
+}
+
 /*extend*/
 
-.noticias{
-    text-align: center; 
-    div{ 
-        display: flex; 
+.noticias {
+    text-align: center;
+    margin-top: 10px;
+
+    div {
+        display: flex;
+
         h2 {
             display: flex;
             justify-content: center;
@@ -64,39 +124,45 @@
             font-size: 30px;
         }
     }
-    div{
-    @extend .noticias;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    background-color: rgb(255, 255, 255);
-        div {  
+
+    div {
         @extend .noticias;
         justify-content: center;
         align-items: center;
-        width: 400px;            
-                div {
-                    @extend .noticias;
-                    justify-content: row;
-                    align-items: center;
-                    padding: 40px;
-                        img {
-                            margin-left: 10px;
-                            width: 20px;
-                        }
-                    }
-                }
+        flex-wrap: wrap;
+
+        div {
+            @extend .noticias;
+            justify-content: center;
+            align-items: center;
+            width: 400px;
+            background-color: beige;
+
+            img {
+                height: 200px;
+                width: 300px;
+            }
+
+            div {
+                @extend .noticias;
+                justify-content: row;
+                align-items: center;
+                padding: 40px;
             }
         }
-    
+    }
+}
+
 
 .transition {
     transition: 1s;
+
     &:hover {
-    transform: scale(1.1);
+        transform: scale(1.1);
     }
 }
+
 .btn-naranja {
     background-color: $color-principal;
+    color: white;
 }
-
