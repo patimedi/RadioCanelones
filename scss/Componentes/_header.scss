@@ -1,27 +1,30 @@
 @import "../Base/variables";
 
-.header{
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     grid-area: header;
     background-image: linear-gradient(rgba(26, 25, 25, 0.178), rgba(177, 177, 177, 0.103), grey);
-    img{
+
+    img {
         width: 180px;
         height: 180px;
         box-sizing: border-box;
         align-content: center;
         margin-left: 100px;
     }
-    nav{
-        ul{
-            li{
+
+    nav {
+        ul {
+            li {
                 margin: 15px;
                 align-content: center;
-                a{
+
+                a {
                     text-decoration: none;
                     color: rgb(255, 255, 255);
-                    text-transform: uppercase; 
+                    text-transform: uppercase;
                 }
             }
         }
