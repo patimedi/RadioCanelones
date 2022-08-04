@@ -3,7 +3,7 @@
 let nombre = prompt('Ingresá tu nombre');
 
 
-let opciones = prompt('¿Querés suscrbirte para recibir un descuento en tu membresía?: \n1 - Sí \n2 - No')
+let opciones = prompt('Opciones de membresía: \n1 - ORO \n2 - PLATA')
 
 
 
@@ -11,78 +11,63 @@ switch (opciones) {
     case '1':
         prompt('ingresa tu mail')
         alert('El descuento es del 10% hasta el 31 de julio')
+        const restaOro = function (precioOro, descuentoOro) { return precioOro - descuentoOro }
+        alert('el precio con descuento es ' + restaOro(1100, 110) + ' ¡Gracias!')
         break;
     case '2':
-        alert('Gracias por tu respuesta, te esperamos pronto')
+        alert('El descuento es del 10% hasta el 31 de julio')
+        const restaPlata = function (precioPlata, descuentoPlata) { return precioPlata - descuentoPlata }
+        alert('el precio con descuento es ' + restaPlata(750, 75) + ' ¡Gracias!')
         break;
 }
 
-const resta = function (precioNormal, descuento) { return precioNormal - descuento }
-alert('el precio con descuento es ' + resta(1100,110) + ' ¡Gracias!')
-
 //costos
-let precioNormal = 1100;
-let descuento = 110; // 10% de descuento
+let precioOro = 1100;
+let descuentoOro = 110; // 10% de descuento
+let precioPlata = 750;
+let descuentoPlata = 75; // 10% de descuento
 
 //Array de noticias pagas para los sucriptores de la membresía
+
 const noticiasPagas = [{
 
-    nombre: 'noticia1',
-    fecha: 'Enero'
-},
-    {
-    nombre: 'noticia2',
-    fecha: 'Febrero'
+    nombre: 'Museo uruguayo de arte Contemporáneo dentro del Top ten mundial',
+    membresia: 'Oro'
 },
 {
-    nombre: 'noticia3',
-    fecha: 'Marzo'
+    nombre: 'Recibimos a La Tabaré en los estudios de Radio Canelones',
+    membresia: 'Oro'
 },
 {
-    nombre: 'noticia4',
-    fecha: 'Abril'
+    nombre: 'Se inauguró el sendero de interpretación junto al Arroyo Canelón Chico',
+    membresia: 'Oro'
 },
 {
-    nombre: 'noticia5',
-    fecha: 'Mayo'
+    nombre: 'Se maneja la posibilidad de trasladar el proyecto de Isla Artificial a Canelones',
+    membresia: 'Plata'
 },
 {
-    nombre: 'noticia6',
-    fecha: 'Junio'
+    nombre: 'En UTE hay retraso en compra de materiales y quiebre de stock en cables',
+    membresia: 'Oro'
 },
 {
-    nombre: 'noticia7',
-    fecha: 'Julio'
-},
-{
-    nombre: 'noticia8',
-    fecha: 'Agosto'
-},
-{
-    nombre: 'noticia9',
-    fecha: 'Setiembre'
-},
-{
-    nombre: 'noticia10',
-    fecha: 'Octubre'
-},
-{
-    nombre: 'noticia11',
-    fecha: 'Noviembre'
-},
-{
-    nombre: 'noticia12',
-    fecha: 'Diciembre'
+
+    nombre: 'Politeama en tu Pueblo»; un proyecto que apuesta a la descentralización',
+    membresia: 'Plata'
 },
 ]
 
 
-const buscar = noticiasPagas.find ((noticia)=> noticia.nombre == 'noticia8');
+const buscar = noticiasPagas.find((noticia) => noticia.nombre == 'Politeama en tu Pueblo»; un proyecto que apuesta a la descentralización');
 
 console.log(buscar);
 
 
-let fecha = prompt('Buscar por fecha');
-const filtrar = noticiasPagas.filter ((noticia) => noticia.fecha.includes(fecha));
+const noticiasOro = document.getElementById('membresiaOro')
+const noticiasPlata = document.getElementById('membresriaPlata')
+const comprar = document.querySelector ('.btn')
 
-console.log(filtrar);
+let agradecimiento = alert('Gracias por realizar tu compra') 
+
+comprar.addEventListener('click', agradecimiento);
+

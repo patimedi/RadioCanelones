@@ -147,6 +147,52 @@
     }
 }
 
+.noticiasPagas {
+    text-align: center;
+    margin-top: 10px;
+
+    div {
+        display: flex;
+
+        h2 {
+            display: flex;
+            justify-content: center;
+            color: rgb(255, 255, 255);
+            background-color: $color-principal;
+            border-radius: 30px;
+            padding: 30px;
+            font-size: 30px;
+        }
+    }
+
+    div {
+        @extend .noticias;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        div {
+            @extend .noticias;
+            justify-content: center;
+            align-items: center;
+            width: 400px;
+            background-color: beige;
+
+            img {
+                height: 200px;
+                width: 200px;
+            }
+
+            div {
+                @extend .noticias;
+                justify-content: row;
+                align-items: center;
+                padding: 40px;
+            }
+        }
+    }
+}
+
 
 .transition {
     transition: 1s;
