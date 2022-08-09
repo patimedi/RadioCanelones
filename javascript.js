@@ -65,9 +65,17 @@ console.log(buscar);
 
 const noticiasOro = document.getElementById('membresiaOro')
 const noticiasPlata = document.getElementById('membresriaPlata')
-const comprar = document.querySelector ('.btn')
+const comprar = document.querySelector('.btn')
 
-let agradecimiento = alert('Gracias por realizar tu compra') 
+let agradecimiento = prompt('Gracias por realizar tu compra')
 
 comprar.addEventListener('click', agradecimiento);
 
+
+let mail = document.querySelector('.eform-label');
+let enviar = document.querySelector('.btn');
+
+enviar.addEventListener('click',()=>{
+    localStorage.setItem('email', mail.value);
+}
+)
