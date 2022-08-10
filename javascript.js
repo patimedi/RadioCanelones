@@ -86,7 +86,7 @@ function opcionMembresia (nuevasMembresias,precio) {
 
 function mostrarMembresias (nuevasMembresias) {
     for (let membresia of nuevasMembresias) {
-    let opcion = `<option value="${membresia.tipoMembresia}" id="membresias${membresia.tipoMembresia}</option> `   
+    let opcion = `<option value="${membresia.tipoMembresia}" id="membresias${membresia.tipoMembresia}"> </option> `   
     membresias.innerHTML += opcion;
     }
 
@@ -99,12 +99,13 @@ let agradecimiento = alert('Gracias por realizar tu compra')
 comprar.addEventListener('click', agradecimiento);
 
 //Stroge
-let mail = document.querySelector('.eform-label');
-let enviar = document.querySelector('.btn');
+let enviar = document.getElementById ('enviar');
+let guardar = document.getElementById ('exampleCheck1')
+let oro = document.getElementById ('oro')
+let plata = document.getElementById ('plata')
 
 enviar.addEventListener('click',()=>{
-    localStorage.setItem('email', mail.value);
+    localStorage.setItem('Membresia', oro);
 }
-)
-
+)//NO me funciona
 
