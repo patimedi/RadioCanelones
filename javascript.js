@@ -1,6 +1,6 @@
 //Se pide nombre para sucribirse a membresía
 
-let nombre = prompt('Ingresá tu nombre');
+/*let nombre = prompt('Ingresá tu nombre');
 
 
 let opciones = prompt('Opciones de membresía: \n1 - ORO \n2 - PLATA')
@@ -19,7 +19,7 @@ switch (opciones) {
         const restaPlata = function (precioPlata, descuentoPlata) { return precioPlata - descuentoPlata }
         alert('el precio con descuento es ' + restaPlata(750, 75) + ' ¡Gracias!')
         break;
-}
+}*/
 
 //costos
 let precioOro = 1100;
@@ -57,21 +57,48 @@ const noticiasPagas = [{
 },
 ]
 
-
+//buscar noticia
 const buscar = noticiasPagas.find((noticia) => noticia.nombre == 'Politeama en tu Pueblo»; un proyecto que apuesta a la descentralización');
 
 console.log(buscar);
 
+//Array
+const nuevasMembresias = [{
 
+    tipoMembresia: 'Oro',
+    precio : 990
+},
+{
+    tipoMembresia: 'Plata',
+    precio: 675
+}]
+
+
+//DOM
 const noticiasOro = document.getElementById('membresiaOro')
 const noticiasPlata = document.getElementById('membresriaPlata')
 const comprar = document.querySelector('.btn')
+const membresias = document.getElementById ('membresias')
 
-let agradecimiento = prompt('Gracias por realizar tu compra')
+function opcionMembresia (nuevasMembresias,precio) {
+    return nuevasMembresias.filter(membresia=>membresia.precio==precio);
+}
+
+function mostrarMembresias (nuevasMembresias) {
+    for (let membresia of nuevasMembresias) {
+    let opcion = `<option value="${membresia.tipoMembresia}" id="membresias${membresia.tipoMembresia}</option> `   
+    membresias.innerHTML += opcion;
+    }
+
+}
+
+
+//Evento
+let agradecimiento = alert('Gracias por realizar tu compra')
 
 comprar.addEventListener('click', agradecimiento);
 
-
+//Stroge
 let mail = document.querySelector('.eform-label');
 let enviar = document.querySelector('.btn');
 
@@ -79,3 +106,5 @@ enviar.addEventListener('click',()=>{
     localStorage.setItem('email', mail.value);
 }
 )
+
+
