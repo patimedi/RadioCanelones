@@ -1,12 +1,5 @@
-//Se pide nombre para sucribirse a membresía
-
 /*let nombre = prompt('Ingresá tu nombre');
-
-
 let opciones = prompt('Opciones de membresía: \n1 - ORO \n2 - PLATA')
-
-
-
 switch (opciones) {
     case '1':
         prompt('ingresa tu mail')
@@ -66,7 +59,7 @@ console.log(buscar);
 const nuevasMembresias = [{
 
     tipoMembresia: 'Oro',
-    precio : 990
+    precio: 990
 },
 {
     tipoMembresia: 'Plata',
@@ -78,33 +71,35 @@ const nuevasMembresias = [{
 const noticiasOro = document.getElementById('membresiaOro')
 const noticiasPlata = document.getElementById('membresriaPlata')
 const comprar = document.querySelector('.btn')
-const membresias = document.getElementById ('membresias')
+const membresias = document.getElementById('membresias')
 
-function opcionMembresia (nuevasMembresias,precio) {
-    return nuevasMembresias.filter(membresia=>membresia.precio==precio);
+function opcionMembresia(nuevasMembresias, precio) {
+    return nuevasMembresias.filter(membresia => membresia.precio == precio);
 }
 
-function mostrarMembresias (nuevasMembresias) {
+function mostrarMembresias(nuevasMembresias) {
     for (let membresia of nuevasMembresias) {
-    let opcion = `<option value="${membresia.tipoMembresia}" id="membresias${membresia.tipoMembresia}"> </option> `   
-    membresias.innerHTML += opcion;
+        let opcion = `<option value="${membresia.tipoMembresia}" id="membresias${membresia.tipoMembresia}"> </option> `
+        membresias.innerHTML += opcion;
     }
 
 }
 
-
 //Evento
-let agradecimiento = alert('Gracias por realizar tu compra')
-
-comprar.addEventListener('click', agradecimiento);
+comprar.addEventListener('click', () => {
+    Swal.fire(
+        'The Internet?',
+        'That thing is still around?',
+        'question')
+})
 
 //Stroge
-let enviar = document.getElementById ('enviar');
-let guardar = document.getElementById ('exampleCheck1')
-let oro = document.getElementById ('oro')
-let plata = document.getElementById ('plata')
+let enviar = document.getElementById('enviar');
+let guardar = document.getElementById('exampleCheck1')
+let oro = document.getElementById('oro')
+let plata = document.getElementById('plata')
 
-enviar.addEventListener('click',()=>{
+enviar.addEventListener('click', () => {
     localStorage.setItem('Membresia', oro);
 }
 )//NO me funciona
