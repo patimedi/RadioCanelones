@@ -54,8 +54,8 @@
                 <h2>Unite a la membresía</h2>
             </div>
             <div>
-                <div id="membresiaOro">           
-                    <img src="../imagenes/oro.jpg"  alt="logo membresia de oro">
+                <div id="membresiaOro">
+                    <img src="../imagenes/oro.jpg" alt="logo membresia de oro">
                     <div>
                         <h3>Membresía de ORO</h3>
                         <p>Precio promoción $ 990. Inlcuye: 10 noticias al mes.</p>
@@ -64,16 +64,64 @@
                     </div>
                 </div>
                 <div id="membresiaPlata">
-                    <img src="../imagenes/plata.jpg"  alt="logo membresia de plata">
+                    <img src="../imagenes/plata.jpg" alt="logo membresia de plata">
                     <div>
-                        <h3>Membresaía de PLATA</h3>
-                        <p>Precio promoción $ 675. Inlcuye: 3 noticias al mes.</p>
-                        <a class="btn btn-naranja transition" href="../Paginas/formulario.html"
-                            role="button">Comprar</a>
+                        <h3>Membresía de PLATA</h3>
+                        <p>Precio promoción $ 675. Inlcuye: 5 noticias al mes.</p>
+                        <!-- Button trigger modal -->
+                        <button type="button" id="btn-ventana" class="btn btn-naranja" data-toggle="modal" data-target="#exampleModal">
+                            Registrate
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Completá los datos</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form class="formulario">
+                                            <div class="mb-3">
+                                                <label for="exampleInputEmail1" class="form-label">Email</label>
+                                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                                    aria-describedby="emailHelp">
+                                                <div id="emailHelp" class="form-text">Ingresá tu correo electrónico
+                                                </div>
+                                            </div>
+                                            <select id="selectMembresias" class="form-select"
+                                                aria-label="Default select example">
+                                                <option selected>Selecciona tu membresía</option>
+                                                <option value="oro">Oro</option>
+                                                <option value="plata">Plata</option>
+                                            </select>
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>Costo</option>
+                                                <option value="1">Oro - $ 990</option>
+                                                <option value="2">Plata - $ 675</option>
+                                            </select>
+                                            <div class="mb-3 form-check">
+                                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                                <label class="form-check-label" for="exampleCheck1">Guardar
+                                                    datos</label>
+                                            </div>
+                                            <button type="submit" id="Enviar" class="btn bg-naranja">Enviar</button>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Cerrar</button>
+                                        <button type="button" class="btn btn-primary">Enviar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
         </section>
+
     </main>
 
     <footer class="footer">

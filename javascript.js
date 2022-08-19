@@ -66,41 +66,40 @@ const nuevasMembresias = [{
     precio: 675
 }]
 
+const comprar = document.querySelectorAll('.btn')
 
-//DOM
-const noticiasOro = document.getElementById('membresiaOro')
-const noticiasPlata = document.getElementById('membresriaPlata')
-const comprar = document.querySelector('.btn')
-const membresias = document.getElementById('membresias')
-
-function opcionMembresia(nuevasMembresias, precio) {
-    return nuevasMembresias.filter(membresia => membresia.precio == precio);
-}
-
-function mostrarMembresias(nuevasMembresias) {
-    for (let membresia of nuevasMembresias) {
-        let opcion = `<option value="${membresia.tipoMembresia}" id="membresias${membresia.tipoMembresia}"> </option> `
-        membresias.innerHTML += opcion;
-    }
-
-}
-
-//Evento
-comprar.addEventListener('click', () => {
-    Swal.fire(
-        'The Internet?',
-        'That thing is still around?',
-        'question')
+comprar.forEach(btn => {
+    btn.addEventListener('click', () => {
+        Swal.fire({
+            title: 'Gracias por registrarte',
+            text: 'A la brevedad nos comunicaremos contigo',
+            icon: 'success',
+            color: '#d4473d',
+        })
+    })
 })
 
 //Stroge
-let enviar = document.getElementById('enviar');
+let enviar = document.getElementById('Enviar');
 let guardar = document.getElementById('exampleCheck1')
-let oro = document.getElementById('oro')
-let plata = document.getElementById('plata')
+let select = document.getElementById('selectMembresias')
+let mail = document.getElementById ('exampleInputEmail1')
+let costo = document.getElementById ('costoMembresias')
 
-enviar.addEventListener('click', () => {
-    localStorage.setItem('Membresia', oro);
+enviar.addEventListener('click', (e) => {
+    e.preventDefault();
+    console.log(select.value)
+    console.log (mail.value)
+const object = {
+    email: mail.value,
+    membresia: select.value,
+    precio: costo.value
 }
-)//NO me funciona
+    localStorage.setItem('Membresia', JSON.stringify(object));
+}
+)
+
+select.addEventListener('change', (e)=>{
+   (e.target.value)
+})
 
