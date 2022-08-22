@@ -49,7 +49,6 @@ const noticiasPagas = [{
     membresia: 'Plata'
 },
 ]
-
 //buscar noticia
 const buscar = noticiasPagas.find((noticia) => noticia.nombre == 'Politeama en tu Pueblo»; un proyecto que apuesta a la descentralización');
 
