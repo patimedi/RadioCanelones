@@ -50,7 +50,7 @@ const noticiasPagas = [{
 },
 ]
 //buscar noticia
-const buscar = noticiasPagas.find((noticia) => noticia.nombre == 'Politeama en tu Pueblo»; un proyecto que apuesta a la descentralización');
+const buscar = noticiasPagas.find((noticia) => noticia.membresia == 'Oro');
 
 console.log(buscar);
 
@@ -67,6 +67,7 @@ const nuevasMembresias = [{
 
 const comprar = document.querySelectorAll('.btn')
 
+
 comprar.forEach(btn => {
     btn.addEventListener('click', () => {
         Swal.fire({
@@ -79,26 +80,43 @@ comprar.forEach(btn => {
 })
 
 //Stroge
-let enviar = document.getElementById('Enviar');
+let enviar = document.getElementById('enviar');
 let guardar = document.getElementById('exampleCheck1')
 let select = document.getElementById('selectMembresias')
-let mail = document.getElementById ('exampleInputEmail1')
-let costo = document.getElementById ('costoMembresias')
+let mail = document.getElementById('exampleInputEmail1')
+let costo = document.getElementById('costoMembresias')
+let formulario = document.querySelector('.formulario')
 
 enviar.addEventListener('click', (e) => {
     e.preventDefault();
     console.log(select.value)
-    console.log (mail.value)
-const object = {
-    email: mail.value,
-    membresia: select.value,
-    precio: costo.value
-}
+    console.log(mail.value)
+    const object = {
+        email: mail.value,
+        membresia: select.value,
+        precio: costo.value
+    }
     localStorage.setItem('Membresia', JSON.stringify(object));
-}
-)
 
-select.addEventListener('change', (e)=>{
-   (e.target.value)
 })
 
+guardar.addEventListener('change', (e) => {
+    (e.target.value)
+})
+
+
+const APIKEY = '4ca8fa0664f7d8977253b10cee319bdb73f6b7ab79e5e090e9767fe3447e2e56';
+
+fetch('https://app.mailslurp.com/inboxes')
+    .then
+    ((response) => console.log(response))
+
+fetch('https://app.mailslurp.com/inboxes', {
+method: 'POST',
+body: JSON.stringify(
+        {
+            email: 'prueba@prueba.com',
+            body: ' Gracias por contactarnos',
+            user: '1',
+        })
+})

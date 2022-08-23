@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Radio Canelones 1570 am | membresía</title>
     <meta name="keywords" content="radio canelones, radio, comunicacion, canelones, 1570 am, radio en vivo">
     <meta name="descripcion"
         content="Contactate con la radio a través de nuestros caneles oficiales, mail, redes sociales y whatsapp">
-
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
+
 </head>
 
 <body>
@@ -47,7 +48,6 @@
         </nav>
         <!--Fin menu-->
     </header>
-
     <main class="main">
         <section class="noticiasPagas">
             <div>
@@ -59,8 +59,6 @@
                     <div>
                         <h3>Membresía de ORO</h3>
                         <p>Precio promoción $ 990. Inlcuye: 10 noticias al mes.</p>
-                        <a class="btn btn-naranja transition" href="../Paginas/formulario.html"
-                            role="button">Comprar</a>
                     </div>
                 </div>
                 <div id="membresiaPlata">
@@ -68,59 +66,36 @@
                     <div>
                         <h3>Membresía de PLATA</h3>
                         <p>Precio promoción $ 675. Inlcuye: 5 noticias al mes.</p>
-                        <!-- Button trigger modal -->
-                        <button type="button" id="btn-ventana" class="btn btn-naranja" data-toggle="modal"
-                            data-target="#exampleModal">
-                            Registrate
-                        </button>
-                        <!-- Modal -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                            aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Completá los datos</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form class="formulario">
-                                            <div class="mb-3">
-                                                <label for="exampleInputEmail1" class="form-label">Email</label>
-                                                <input type="email" class="form-control" id="exampleInputEmail1"
-                                                    aria-describedby="emailHelp">
-                                                <div id="emailHelp" class="form-text">Ingresá tu correo electrónico
-                                                </div>
-                                            </div>
-                                            <select id="selectMembresias" class="form-select"
-                                                aria-label="Default select example">
-                                                <option selected>Selecciona tu membresía</option>
-                                                <option value="oro">Oro</option>
-                                                <option value="plata">Plata</option>
-                                            </select>
-                                            <select class="form-select" aria-label="Default select example">
-                                                <option selected>Costo</option>
-                                                <option value="1">Oro - $ 990</option>
-                                                <option value="2">Plata - $ 675</option>
-                                            </select>
-                                            <div class="mb-3 form-check">
-                                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                <label class="form-check-label" for="exampleCheck1">Guardar
-                                                    datos</label>
-                                            </div>
-                                            <button type="submit" id="Enviar" class="btn bg-naranja">Enviar</button>
-                                        </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-dismiss="modal">Cerrar</button>
-                                        <button type="button" class="btn btn-primary">Enviar</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        </section>
+        
+        <section>
+            <div>
+                <h3>Quiero recibir más información</h3>
+            </div>
+            <form class="formulario">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">Ingresá tu correo electrónico</div>
+                </div>
+
+                <select id="selectMembresias" class="form-select" aria-label="Default select example">
+                    <option selected>Selecciona tu membresía</option>
+                    <option value="oro">Oro</option>
+                    <option value="plata">Plata</option>
+                </select>
+
+                <select id="costoMembresias" class="form-select" aria-label="Default select example">
+                    <option selected>Costo</option>
+                    <option value="990">Oro - $ 990</option>
+                    <option value="675">Plata - $ 675</option>
+                </select>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Guardar datos</label>
+                </div>
+                <button type="submit" id="enviar" class="btn bg-naranja">Enviar</button>
+            </form>
         </section>
 
     </main>
@@ -140,10 +115,10 @@
             </ul>
         </div>
     </footer>
+
     <script src="../js/bootstrap.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../javascript.js"></script>
-
 </body>
 
 </html>
