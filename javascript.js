@@ -105,18 +105,12 @@ guardar.addEventListener('change', (e) => {
 })
 
 
-const APIKEY = '4ca8fa0664f7d8977253b10cee319bdb73f6b7ab79e5e090e9767fe3447e2e56';
+enviar.addEventListener('click', () => {
+    fetch('../data.json')
+        .then((response) => response.json())
 
-fetch('https://app.mailslurp.com/inboxes')
-    .then
-    ((response) => console.log(response))
-
-fetch('https://app.mailslurp.com/inboxes', {
-method: 'POST',
-body: JSON.stringify(
-        {
-            email: 'prueba@prueba.com',
-            body: ' Gracias por contactarnos',
-            user: '1',
-        })
 })
+
+
+
+
