@@ -54,17 +54,6 @@ const buscar = noticiasPagas.find((noticia) => noticia.membresia == 'Oro');
 
 console.log(buscar);
 
-//Array
-const nuevasMembresias = [{
-
-    tipoMembresia: 'Oro',
-    precio: 990
-},
-{
-    tipoMembresia: 'Plata',
-    precio: 675
-}]
-
 const comprar = document.querySelectorAll('.btn')
 
 
@@ -104,13 +93,11 @@ guardar.addEventListener('change', (e) => {
     (e.target.value)
 })
 
+//Array
+let nuevasMembresias = []
 
 enviar.addEventListener('click', () => {
     fetch('../data.json')
         .then((response) => response.json())
-
 })
-
-
-
 
